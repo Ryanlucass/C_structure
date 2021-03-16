@@ -10,22 +10,22 @@ int main(){
     int valor, y;
     valor = 35;
 
-    x = &valor; // Atribuindo o endereÃ§o do valor a X
-    y = *x; //Atribuindo o conteÃºdo da variÃ¡vel apontada por X a Y
+    x = &valor; // Atribuindo o endereço do valor a X
+    y = *x; //Atribuindo o conteúdo da variável apontada por X a Y
 
     //%x me retorna um valor hexadecimal
-    //%p me retorna toda o endereÃ§o, com muito lixo 
+    //%p me retorna toda o endereço, com muito lixo 
 
-    //& operador de endereÃ§o, operador unÃ¡rio que permite retornar o endereÃ§o na memÃ³ria
-    //* operador de indireÃ§Ã£o, repasse o valor apontado, NÃƒO o endereÃ§o  
+    //& operador de endereço, operador unário que permite retornar o endereço na memória
+    //* operador de indireção, repasse o valor apontado, NÃO o endereço  
 
-    printf("Endereco da variavel comum valor: %x\n", &valor); //Pedindo o endereÃ§o armazenado entÃ£o Ã© %p
-    printf("Lendo o conteÃºdo do ponteiro x: %x\n", x);//como x Ã© um ponteiro ele irÃ¡ retornar o endereÃ§o nele armazenado
-    printf("Endereco de variÃ¡vel ponteiro x: %x\n", &x);// posiÃ§Ã£o na memÃ³ria do ponteiro
-    printf("Endereco de x em decimal: %d\n", x);//se eu colocar %d ele faz a conversÃ£o de hexadecimal para decimal   
-    printf("Conteudo da variavel apontada por x: %d\n",*x);
+    printf("Endereço da variável comum valor: %x\n", &valor); //Pedindo o endereço armazenado então é %p
+    printf("Lendo o conteúdo do ponteiro x: %x\n", x);//como x é um ponteiro ele irá retornar o endereço nele armazenado
+    printf("Endereço de variável ponteiro x: %x\n", &x);// posição na memória do ponteiro
+    printf("Endereço de x em decimal: %d\n", x);//se eu colocar %d ele faz a conversão de hexadecimal para decimal   
+    printf("Conteúdo da variável apontada por x: %d\n",*x);
 
-    printf("Conteudo da variavel comum y: %d\n", y);//valor de Y
+    printf("Conteúdo da variável comum y: %d\n", y);//valor de Y
     
      
 
