@@ -6,21 +6,21 @@ int main(){
 
 setlocale(LC_ALL,"Portuguese");
 
-//Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real e char. Associe as variáveis aos ponteiros (use &). Modifique os valores de cada variável usando os ponteiros. Imprima os valores das variáveis antes e após a modificação.
+//Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real e char. Associe as vari?veis aos ponteiros (use &). Modifique os valores de cada vari?vel usando os ponteiros. Imprima os valores das vari?veis antes e ap?s a modifica??o.
 
 int inteiro, *PonteiroInt;
 //float real, *PonteiroReal;
 char c, *PonteiroChar;
 
-inteiro = 34;
+PonteiroInt = 232;
 c = 'c';
 
 inteiro = &PonteiroInt;
 //real = &PonteiroReal;
 c = &PonteiroChar;
 
-printf("Conteúdo da variável PonteiroInt : %d\n", *PonteiroInt);
-printf("Conteúdo da variável PonteiroChar : %c\n", *PonteiroChar);
+printf("Conte?do da vari?vel PonteiroInt : %x\n", *PonteiroInt);
+printf("Conte?do da vari?vel PonteiroChar : %x\n", *PonteiroChar);
 
 
 
