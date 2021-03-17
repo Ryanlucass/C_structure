@@ -50,12 +50,4 @@ printf("Conteúdo da variável PonteiroInt : %d\n", *P_inteiro);
 printf("Conteúdo da variável PonteiroReal : %.2f\n", *P_real);
 printf("Conteúdo da variável PonteiroChar : %c\n", *P_char);
 
-
-
-
-
-
-
-
-
 }
