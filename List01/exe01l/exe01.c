@@ -30,7 +30,7 @@ P_real = &real;
 P_char = &e;
 
 
-printf("\nEndereços da memóroa dos ponteiros\n");
+printf("\nEndereços da memória dos ponteiros\n");
 printf("Endereço da variável PonteiroInt : %x\n", P_inteiro);
 printf("Endereço da variável PonteiroReal : %x\n", P_real);
 printf("Endereço da variável PonteiroChar : %x\n", P_char);
