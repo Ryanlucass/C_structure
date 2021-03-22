@@ -2,21 +2,20 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//02-Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
+//02-Escreva um programa que contenha duas variï¿½veis inteiras. Compare seus endereï¿½os e exiba o maior endereï¿½o.
 
 void main(){
 
     setlocale(LC_ALL,"Portuguese");
 
-    int valor01, valor02, valormaior, valormenor;
+    int valor01 = 43, valor02 = 126; 
+    int valormaior, valormenor;
 
-    printf("Digite o valor 01: ");
-    scanf("%d",& valor01);
-
-    valormaior = valor01;
+    printf("O valor da variavel A eh: %d", valor01);
+    printf("\nO valor da variavel B eh: %d", valor02);
     
-    printf("Digite o valor 02: ");
-    scanf("%d",& valor02);
+    valormaior = valor01;
+   
 
     if(valormaior > valor02)
     {
@@ -28,14 +27,14 @@ void main(){
         valormenor = valor01;
     }
     
-    printf("O maior endereço é: %x\n", valormaior);
-    printf("O menor endereço é: %x\n", valormenor);
+    printf("\nO maior endereco eh: %x\n", valormaior);
+    printf("O menor endereco eh: %x\n", valormenor);
 
     
- // Dúvidas sobre a questão: 
+ // Dï¿½vidas sobre a questï¿½o: 
 
  /*
-  uma dúvida para falar na aula, quando eu tranfiro um valor de uma variável para outra, ela também move o espaço na memória, como aqui?
+  uma dï¿½vida para falar na aula, quando eu tranfiro um valor de uma variï¿½vel para outra, ela tambï¿½m move o espaï¿½o na memï¿½ria, como aqui?
  */
 
 }
