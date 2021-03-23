@@ -19,7 +19,7 @@ int a, b,*p1, *p2; //definindo variáveis e ponteiros
     (*p2)++; // 7++ = 8
     p1 = &b; //  atribuindo o endereço da variável ao ponteiro 
 
-    printf("%d %d\n", *p1, *p2);
-    printf("%d %d\n", a, b);
+    printf("%d %d\n", *p1, *p2); //imprimindo o conteudo da variavel
+    printf("%d %d\n", a, b); //imprimindo a variavel
 
 }
