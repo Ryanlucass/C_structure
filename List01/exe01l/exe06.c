@@ -2,24 +2,44 @@
 #include <stdlib.h>
 #include <locale.h>
 
+//06-Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. Em seguida, compare seus endereços e exiba o conteúdo do maior.
+
 void main(){
 
-//06 parecida
-//07Análise o código a seguir e descreva linha à linha o que ocorre e mostre o resultado final.
+    setlocale(LC_ALL,"Portuguese");
 
-int a, b,*p1, *p2; //definindo variáveis e ponteiros 
 
-    a = 4; // definindo valor 4 para a variável a 
-    b = 3; //defininfo valor 3 para a variável b
-    p1 = &a; // atribuindo o endereço da variável ao ponteiro 
-    p2 = p1; // passando o endereço de um ponteiro para o outro 
+    int valor01, valor02; 
+    int valormaior, valormenor;
 
-    *p2 = *p1 + 3; // 4 = 4 + 3
-    b = b * (*p1); // 3 = 3 x (4)
-    (*p2)++; // 7++ = 8
-    p1 = &b; //  atribuindo o endereço da variável ao ponteiro 
+    printf("Digite o valor da variavel 01: ");
+    scanf("%d", &valor01);
 
-    printf("%d %d\n", *p1, *p2);
-    printf("%d %d\n", a, b);
+    printf("\nDigite o valor da variavel 01: ");
+    scanf("%d", &valor02);
+    
+    valormaior = valor01;
+   
+
+    if(valormaior > valor02)
+    {
+        valormenor = valor02;
+    }
+    else 
+    {
+        valormaior = valor02;
+        valormenor = valor01;
+    }
+    
+    printf("\nO maior endereco eh: %x\n", valormaior);
+    printf("O menor endereco eh: %x\n", valormenor);
+
+    
+ // Dï¿½vidas sobre a questï¿½o: 
+
+ /*
+  uma dï¿½vida para falar na aula, quando eu tranfiro um valor de uma variï¿½vel para outra, ela tambï¿½m move o espaï¿½o na memï¿½ria, como aqui?
+ */
 
 }
+ 
