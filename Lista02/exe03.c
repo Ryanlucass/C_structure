@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//03-Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. Em seguida, compare seus endereços e exiba o conteúdo do maior endereço.
+//03-Escreva um programa que contenha duas variï¿½veis inteiras. Leia essas variï¿½veis do teclado. Em seguida, compare seus endereï¿½os e exiba o conteï¿½do do maior endereï¿½o.
+
+//Ã© necessÃ¡rio usar ponteiro na questÃ£o 
 
 void main(){
 

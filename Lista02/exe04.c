@@ -4,6 +4,8 @@
 
 //04-Faça um programa que leia 2 valores inteiros e troque os seus conteúdos, ou seja, por exemplo e, após a execução, A conterá o valor de B e B terá o valor de A.
 
+//é necessário usar ponteiros 
+
 void main()
 {
 

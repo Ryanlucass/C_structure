@@ -4,6 +4,7 @@
 
 //05-Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior.
 
+//ponteiros é necessário usar 
 void main(){
 
     setlocale(LC_ALL,"Portuguese");

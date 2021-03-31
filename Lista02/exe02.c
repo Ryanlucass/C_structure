@@ -4,6 +4,9 @@
 
 //02-Escreva um programa que contenha duas vari�veis inteiras. Compare seus endere�os e exiba o maior endere�o.
 
+
+//Refazer, preciso utilizar ponteiros na hora que me refiro a endereço de variável, a necessidade da lista 02  
+
 void main(){
 
     setlocale(LC_ALL,"Portuguese");
@@ -12,7 +15,11 @@ void main(){
     int valormaior, valormenor;
 
     printf("O valor da variavel A eh: %d", valor01);
-    printf("\nO valor da variavel B eh: %d", valor02);
+    printf("\nO valor da variavel B eh: %d\n", valor02);
+
+    printf("O valor do endereco de A eh: %x\n",valor01);
+    printf("O valor do endereco de A eh: %x",valor02);
+
     
     valormaior = valor01;
    
