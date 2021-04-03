@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//02 Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
+//02-Escreva um programa que contenha duas variï¿½veis inteiras. Compare seus endereï¿½os e exiba o maior endereï¿½o.
+
+
+//Refazer, preciso utilizar ponteiros na hora que me refiro a endereÃ§o de variÃ¡vel, a necessidade da lista 02  
+
 void main(){
 
     setlocale(LC_ALL,"Portuguese");

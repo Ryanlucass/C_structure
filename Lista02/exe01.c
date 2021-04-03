@@ -6,48 +6,44 @@ int main(){
 
 setlocale(LC_ALL,"Portuguese");
 
-//Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real e char. Associe as vari?veis aos ponteiros (use &). Modifique os valores de cada vari?vel usando os ponteiros. Imprima os valores das vari?veis antes e ap?s a modifica??o.
 
-//declarando as vari?veis
+//1 Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real e char. Associe as variáveis aos ponteiros (use &). Modifique os valores de cada variável usando os ponteiros. Imprima os valores das variáveis antes e após a modificação.
+
+//declarando as variáveis
 int inteiro;
 float real;
-char e;
+char caractere;
 
-//conte?do das vari?veis
+//conteúdo das variáveis
 inteiro = 35;
 real = 35.0;
-e = 'e';
-
+caractere = 'e';
 
 //declarando os ponteiros 
 int *P_inteiro;
 float *P_real;
 char *P_char;
 
-//Associando as vari?veis ao ponteiros 
+
+//Associando as variáveis aos ponteiros 
 P_inteiro = &inteiro; 
 P_real = &real;
-P_char = &e;
+P_char = &caractere;
 
+printf("\nValores das variáveis antes das modificações\n");
+printf("Conteúdo da variável Int : %d\n", inteiro);
+printf("Conteúdo da variável Real : %.2f\n", real);
+printf("Conteúdo da variável Char : %c\n", caractere);
 
-printf("\nEndere?os da mem?ria dos ponteiros\n");
-printf("Endere?o da vari?vel PonteiroInt : %x\n", P_inteiro);
-printf("Endere?o da vari?vel PonteiroReal : %x\n", P_real);
-printf("Endere?o da vari?vel PonteiroChar : %x\n", P_char);
-
-printf("\nValores dos ponteiros antes das modificações\n");
-printf("Conte?do da vari?vel PonteiroInt : %d\n", *P_inteiro);
-printf("Conte?do da vari?vel PonteiroReal : %.2f\n", *P_real);
-printf("Conte?do da vari?vel PonteiroChar : %c\n", *P_char);
-
-//Alterando os valores das vari?veis atraves dos ponteiros 
+//Alterando os valores das variáveis atraves dos ponteiros 
 *P_inteiro = 34;
 *P_real = 32.0;
 *P_char = 'c';
 
-printf("\nValores dos ponteiros ap?s as modifica??es\n");
-printf("Conte?do da vari?vel PonteiroInt : %d\n", *P_inteiro);
-printf("Conte?do da vari?vel PonteiroReal : %.2f\n", *P_real);
-printf("Conte?do da vari?vel PonteiroChar : %c\n", *P_char);
+
+printf("\nValores dos ponteiros após as modificações\n");
+printf("Conteúdo da variável PonteiroInt : %d\n", *P_inteiro);
+printf("Conteúdo da variável PonteiroReal : %.2f\n", *P_real);
+printf("Conteúdo da variável PonteiroChar : %c\n", *P_char);
 
 }
