@@ -2,48 +2,55 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//02-Escreva um programa que contenha duas variï¿½veis inteiras. Compare seus endereï¿½os e exiba o maior endereï¿½o.
+//02 Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
 
-
-//Refazer, preciso utilizar ponteiros na hora que me refiro a endereÃ§o de variÃ¡vel, a necessidade da lista 02  
-
+  
 void main(){
 
     setlocale(LC_ALL,"Portuguese");
 
+    //declarando variáveis inteiras e defindo seus valores 
     int valor01 = 43, valor02 = 126; 
     int valormaior, valormenor;
 
-    printf("O valor da variavel A eh: %d", valor01);
-    printf("\nO valor da variavel B eh: %d\n", valor02);
+    //declarando ponteiros
+    int *P_valor01;
+    int *P_valor02;
 
-    printf("O valor do endereco de A eh: %x\n",valor01);
-    printf("O valor do endereco de A eh: %x",valor02);
+    //passando valores paras os ponteiros 
+    P_valor01 = &valor01;
+    P_valor02 = &valor02;
 
-    
-    valormaior = valor01;
+    //endereço das variáveis
+    printf("O valor do endereço de A é: %x\n",P_valor01); 
+    printf("O valor do enderçco de B é: %x\n",P_valor02);
+
+
+    //Definindo o maior endereço
+    valormaior = P_valor01;
    
-
-    if(valormaior > valor02)
+    //Se o primeiro valor continuar sendo maior, ele é definitivamente o maior valor
+    if(valormaior > P_valor02)
     {
-        valormenor = valor02;
+        valormenor = P_valor02;
     }
+    //se não, ele é o menor endereço
     else 
     {
-        valormaior = valor02;
-        valormenor = valor01;
+        valormaior = P_valor02;
+        valormenor = P_valor01;
     }
     
-    printf("\nO maior endereco eh: %x\n", valormaior);
-    printf("O menor endereco eh: %x\n", valormenor);
+    printf("\nO maior endereço é: %x\n", valormaior);
+    printf("O menor endereço é: %x\n", valormenor);
+
+    printf("\nEndereço em Deciamal\n");
+
+    printf("\nO maior endereço é: %d\n", valormaior);
+    printf("O menor endereço é: %d\n", valormenor);
 
     
- // Dï¿½vidas sobre a questï¿½o: 
-
- /*
-  uma dï¿½vida para falar na aula, quando eu tranfiro um valor de uma variï¿½vel para outra, ela tambï¿½m move o espaï¿½o na memï¿½ria, como aqui?
- */
-
+ 
 }
 
 
