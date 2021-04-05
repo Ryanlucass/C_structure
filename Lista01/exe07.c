@@ -4,8 +4,7 @@
 
 void main(){
 
-//06 parecida
-//07Análise o código a seguir e descreva linha à linha o que ocorre e mostre o resultado final.
+//07.	An�lise o c�digo a seguir e descreva linha a linha o que ocorre e mostre o resultado final.
 
 int a, b,*p1, *p2; //definindo variáveis e ponteiros 
 

@@ -2,33 +2,44 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//05-Escreva um programa que contenha duas variÃ¡veis inteiras. Compare seus endereÃ§os e exiba o maior.
+//05 Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
 
-//ponteiros Ã© necessÃ¡rio usar 
+  
 void main(){
 
     setlocale(LC_ALL,"Portuguese");
 
-    int valor01 = 43, valor02 = 126; 
+    //declarando variáveis inteiras e defindo seus valores 
+    int valor01 = 124, valor02 = 2; 
     int valormaior, valormenor;
 
-    printf("O valor da variavel A eh: %x", valor01);
-    printf("\nO valor da variavel B eh: %x", valor02);
-    
-    valormaior = valor01;
-   
+    //declarando ponteiros
+    int *P_valor01;
+    int *P_valor02;
 
-    if(valormaior > valor02)
+    //passando valores paras os ponteiros 
+    P_valor01 = &valor01;
+    P_valor02 = &valor02;
+
+    //endereço das variáveis
+    printf("O valor do endereço de A é: %x\n",P_valor01); 
+    printf("O valor do enderçco de B é: %x\n",P_valor02);
+
+
+    //Definindo o maior endereço
+    valormaior = P_valor01;
+   
+    //Se o primeiro valor continuar sendo maior, ele é definitivamente o maior valor
+    if(valormaior > P_valor02)
     {
-        valormenor = valor02;
+        valormenor = P_valor02;
     }
+    //se não, ele é o menor endereço
     else 
     {
-        valormaior = valor02;
-        valormenor = valor01;
+        valormaior = P_valor02;
+        valormenor = P_valor01;
     }
     
-    printf("\nO maior endereco eh: %x\n", valormaior);
-    printf("O menor endereco eh: %x\n", valormenor);
-
+    printf("\nO maior endereço é: %x\n", valormaior);
 }

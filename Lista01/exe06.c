@@ -2,46 +2,53 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//06-Escreva um programa que contenha duas variÃ¡veis inteiras. Leia essas variÃ¡veis do teclado. Em seguida, compare seus endereÃ§os e exiba o conteÃºdo do maior.
+//03-Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveiss do teclado. Em seguida, compare seus endereços e exiba o conteúdo do maior.
 
-//ponteiros Ã© necessÃ¡rio usar 
+ 
 
 void main(){
 
     setlocale(LC_ALL,"Portuguese");
 
+    //definindo as variáveis 
+    int valor01, valor02, valormaior, valormenor;
 
-    int valor01, valor02; 
-    int valormaior, valormenor;
+    //definindo os ponteiros 
+    int *Pvalor01, *Pvalor02;
 
-    printf("Digite o valor da variavel 01: ");
-    scanf("%d", &valor01);
+    //Atribuindo as variáveis aos ponteiros 
+    Pvalor01 = &valor01;
+    Pvalor02 = &valor02;
 
-    printf("\nDigite o valor da variavel 01: ");
-    scanf("%d", &valor02);
+
+    retorno: printf("Digite o valor 01: ");
+    scanf("%d",& valor01);
+
+    valormaior = Pvalor01;
     
-    valormaior = valor01;
+    printf("Digite o valor 02: ");
+    scanf("%d",& valor02);
    
+    if(valor01 == valor02){
+        printf("\nOs valores são iguais\n\n");
+        goto retorno;
+    }
 
-    if(valormaior > valor02)
+    if(valormaior > Pvalor02)
     {
-        valormenor = valor02;
+        valormenor = Pvalor02;
     }
     else 
     {
-        valormaior = valor02;
-        valormenor = valor01;
+        valormaior = Pvalor02;
+        valormenor = Pvalor01;
     }
     
-    printf("\nO maior endereco eh: %x\n", valormaior);
-    printf("O menor endereco eh: %x\n", valormenor);
+    printf("\nO valor do endereço de A é: %x\n",Pvalor01); 
+    printf("O valor do enderçco de B é: %x\n",Pvalor02);
 
-    
- // DÃ¯Â¿Â½vidas sobre a questÃ¯Â¿Â½o: 
 
- /*
-  uma dÃ¯Â¿Â½vida para falar na aula, quando eu tranfiro um valor de uma variÃ¯Â¿Â½vel para outra, ela tambÃ¯Â¿Â½m move o espaÃ¯Â¿Â½o na memÃ¯Â¿Â½ria, como aqui?
- */
+    printf("O maior endereço é: %x\n", valormaior);
+    printf("O menor endereço é: %x\n", valormenor);
 
 }
- 
