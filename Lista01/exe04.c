@@ -2,17 +2,35 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//04-Fa√ßa um programa que leia 2 valores inteiros e troque os seus conte√∫dos, ou seja, por exemplo e, ap√≥s a execu√ß√£o, A conter√° o valor de B e B ter√° o valor de A.
+//4.FaÁa um programa que leia 2 valores inteiros e troque os seus conte˙dos, ou seja, por exemplo e, apÛs a execuÁ„o, A conter· o valor de B e B ter· o valor de A
+ 
 
-//√© necess√°rio usar ponteiros 
+ void main(){
 
-void main()
-{
+    setlocale(LC_ALL,"Portuguese");
 
-int a = 23, b = 12;
+    int valor01, valor02;
+    int *Pvalor01, *Pvalor02;
+    int a,b;
 
-printf("A = %d e B = %d\n", a,b);
+    Pvalor01 = &valor01;
+    Pvalor02 = &valor02;
 
-printf("A = %d e B = %d", b,a);
+    printf("Digite o valor de A È: ");
+    scanf("%d",& valor01);
 
-}
+    printf("Digite o valor de B È: ");
+    scanf("%d",& valor02);
+
+    printf("O valor de A È: %d\n", valor01);
+    printf("O valor de B È: %d\n", valor02);
+
+    a = *Pvalor01;
+    b = *Pvalor02;
+    
+
+    printf("O valor de A È: %d\n", a);
+    printf("O valor de B È: %d", b);
+
+
+ }
