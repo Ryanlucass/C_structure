@@ -10,35 +10,53 @@ void main(){
 
     setlocale(LC_ALL,"Portuguese");
 
+    //definindo as variáveis 
     int valor01, valor02, valormaior, valormenor;
 
-    printf("Digite o valor 01: ");
+    //definindo os ponteiros 
+    int *Pvalor01, *Pvalor02;
+
+    //Atribuindo as variáveis aos ponteiros 
+    Pvalor01 = &valor01;
+    Pvalor02 = &valor02;
+
+
+    retorno: printf("Digite o valor 01: ");
     scanf("%d",& valor01);
 
-    valormaior = valor01;
+    valormaior = Pvalor01;
     
     printf("Digite o valor 02: ");
     scanf("%d",& valor02);
+   
+    if(valor01 == valor02){
+        printf("\nOs valores são iguais\n\n");
+        goto retorno;
+    }
 
-    if(valormaior > valor02)
+    if(valormaior > Pvalor02)
     {
-        valormenor = valor02;
+        valormenor = Pvalor02;
     }
     else 
     {
-        valormaior = valor02;
-        valormenor = valor01;
+        valormaior = Pvalor02;
+        valormenor = Pvalor01;
     }
     
-    printf("O maior endereco eh: %x\n", valormaior);
-    printf("O menor endereco eh: %x\n", valormenor);
+    printf("\nO valor do endereço de A é: %x\n",Pvalor01); 
+    printf("O valor do enderçco de B é: %x\n",Pvalor02);
+
+
+    printf("O maior endereço é: %x\n", valormaior);
+    printf("O menor endereço é: %x\n", valormenor);
+
+    printf("\nValores em decimal\n");
+
+    printf("O maior endereço é: %d\n", valormaior);
+    printf("O menor endereço é: %d\n", valormenor);
 
     
- // D?vidas sobre a quest?o: 
-
- /*
-  uma d?vida para falar na aula, quando eu tranfiro um valor de uma vari?vel para outra, ela tamb?m move o espa?o na mem?ria, como aqui?
- */
 
 }
 
