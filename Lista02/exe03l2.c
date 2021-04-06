@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <locale.h>
 
-//9.	Faça um programa que peça ao usuário para digitar 10 valores e some-os.
 float soma();
 void main(){
 
-    setlocale(LC_ALL,"Portuguese");
+setlocale(LC_ALL,"Portuguese");
+
+//10.	Faça um programa que leia 10 inteiros e imprima sua média.
 
     int vetor[10];
-    
     float resultado;
 
     for(int i=0; i<10; i++)
@@ -20,7 +20,7 @@ void main(){
         resultado = soma(vetor);
    
 
-    printf("A soma da média dos valores é: %.2f", resultado);
+    printf("A média dos valores é: %.2f", resultado);  
 
 
 
@@ -28,15 +28,15 @@ void main(){
 
 float soma(int *vetor){
     
-    float res=0;
+    float res = 0;
     float media;
-
-     for(int i=0; i<10; i++){
+     
+    for(int i=0; i<10; i++){
         res = res + vetor[i];
     }
 
     media = res / 10;
-
-
+   
     return media;
 }
+
