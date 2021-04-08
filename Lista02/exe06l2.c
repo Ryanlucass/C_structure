@@ -1,23 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
-void main(){
-     
+void intervalo();
+void main()
+    {
      //13.Informar se um número inteiro está ou não dentro de um intervalo de 2 numero
-
-
      //O intervalo vai ser de entre 5 e 10
 
      setlocale(LC_ALL,"Portuguese");
 
-     int num, num1, num2;
+        intervalo();
+     
+     
+    }
+
+     void intervalo(){
+         int num, num1, num2;
      int chance =0;
 
      retorno: printf("Digite um número e veremos se ele está dentro do intervalo: ");
      scanf("%d",&num);
      
-
+     system("cls");
      if(num >= 5 && num <= 10 ){
          printf("parabéns, o número está dentro do intervalo\n");
      }
@@ -51,7 +55,5 @@ void main(){
          chance++;
          goto retorno;
      }
-     
-       
-     
-}
+      
+     }
