@@ -22,11 +22,11 @@ setlocale(LC_ALL,"Portuguese");
         printf("%4d", numeros[i]);
     }
 
-
     //Algoritmo de ordenação Bubble Sort
     //o contador faz com que o for abaixo dele repita a quantidade de vezes necessárias
     //se não fizer isso, ele só vai pegar o número maior e colocar no final do array
     //se ouver mais de um número tão alto, ele não pega;
+    
     for(contador = 1; contador <TAM; contador++){
         for(i = 0; i<TAM-1; i++){
             if(numeros[i] > numeros[i + 1]){

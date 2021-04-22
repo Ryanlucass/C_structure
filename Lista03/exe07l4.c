@@ -2,68 +2,77 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <locale.h>
+#include <string.h>
 
 void main(){
+
+	//Faça um programa que leia os dados de 10 alunos (Nome, matricula, Media Final), armazenando em um vetor. Uma vez lidos os dados, dívida estes dados em 2 novos vetores, o vetor dos aprovados e o vetor dos reprovados, considerando a media mínima para a aprovação como sendo 5.0. Exibir na tela os dados do vetor de aprovados, seguido dos dados do vetor de reprovados.
+
 	setlocale(LC_ALL,"Portuguese");
 
 	typedef struct{
 	char Nome[20];
-	int Matricula;
+	char Matricula[8];
 	float MediaFinal;
 	}Dados;
 	
+	int i;
+
 	Dados Aluno[2];
 	Dados Aprovados[2];
 	Dados Reprovados[2];
+
+	for(i=0; i<2; i++){
+		Aprovados[i].Nome[0]=' ';
+		Reprovados[i].Nome[0]=' ';
+	}
 	
-	Dados *ponteiro1 = Aprovados;
-	Dados *ponteiro2 = Reprovados;
-	
-	for(int i = 0; i < 2; i++)
+	for(i = 0; i < 2; i++)
 	{
 		printf(" Cadastre o %dª aluno:\n", i+1);
+
+		printf("Digite o nome: ");
+        scanf("%s",&Aluno[i].Nome);
+        fflush(stdin);
 				
-		printf("\n Nome: ");
+		printf("Matrícula: ");
+		scanf("%s", &Aluno[i].Matricula);
 		fflush(stdin);
-		//gets(Aluno[i].Nome);
-		scanf("%s",&Aluno[i].Nome);
 		
-		printf("\n Matrícula: ");
-		scanf("%d", &Aluno[i].Matricula);
-		
-		printf("\n Média Final: "),
+		printf("Média Final: "),
 		scanf("%f", &Aluno[i].MediaFinal);	
 		printf("\n\n");
 	}
 
-	for(int i = 0; i < 2; i++){
-	 	if(Aluno[i].MediaFinal >= 5){ //verificando se estão na média
-		 	//*ponteiro1[i].Nome = Aluno[i].Nome;
-	 		Aprovados[i].Matricula = Aluno[i].Matricula;
-	 		Aprovados[i].MediaFinal = Aluno[i].MediaFinal;
-		}
-		 else
-		{
-			//*ponteiro2[i].Nome = Aluno[i].Nome;
-	 		Reprovados[i].Matricula = Aluno[i].Matricula;
-	 		Reprovados[i].MediaFinal = Aluno[i].MediaFinal;
-		 }
+	for(i = 0; i < 2; i++){
+	 	if(Aluno[i].MediaFinal > (5.0)){
 
-	}
-	for(int i = 0; i < 2; i++){
-		if(Aprovados[i].MediaFinal >= 5){
-		printf("\nAprovados\n");
-		//printf("Nome: %s\n",*ponteiro1[i].Nome);
-		printf("Matrícula: %d\n",Aprovados[i].Matricula);
-		printf("Media Final: %.2f\n",Aprovados[i].MediaFinal);
-		break;
+	 		Aprovados[i] = Aluno[i];			
 		}
-		else if(Reprovados[i].MediaFinal < 5){
-		printf("\nAprovados\n");
-		//printf("Nome: %s\n",*ponteiro2[i].Nome);
-		printf("Matrícula: %d\n",Reprovados[i].Matricula);
-		printf("Media Final: %.2f\n",Reprovados[i].MediaFinal);
-		break;
+		if(Aluno[i].MediaFinal < (5.0)){
+
+			Reprovados[i] = Aluno[i];
+		}
+	}
+	
+
+	for(i = 0; i < 2; i++){
+		if(Aprovados[i].Nome[0]!= ' '){
+			printf("\nAprovados: \n");
+			printf("\nAluno: %s",Aprovados[i].Nome);
+			printf("\nAluno Matrícula: %s\n",Aprovados[i].Matricula);
+			printf("Media Final: %.2f\n",Aprovados[i].MediaFinal);
+		}
+	}
+
+	for(i = 0; i <2; i++){
+		if(Reprovados[i].Nome[0]!= ' '){
+
+		printf("\nReprovados: \n");
+		printf("\nAluno: %s",Reprovados[i].Nome);
+		printf("\nAluno Matrícula: %s\n",Reprovados[i].Matricula);
+		printf("Media Final: %.2f",Reprovados[i].MediaFinal);
+		
 		}
 	}
 
