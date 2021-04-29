@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <locale.h>
 #include <string.h>
+#define TAM 10
 
 void main(){
 
@@ -18,16 +19,16 @@ void main(){
 	
 	int i;
 
-	Dados Aluno[2];
-	Dados Aprovados[2];
-	Dados Reprovados[2];
+	Dados Aluno[10];
+	Dados Aprovados[10];
+	Dados Reprovados[10];
 
-	for(i=0; i<2; i++){
+	for(i=0; i<TAM; i++){
 		Aprovados[i].Nome[0]=' ';
 		Reprovados[i].Nome[0]=' ';
 	}
 	
-	for(i = 0; i < 2; i++)
+	for(i = 0; i <TAM; i++)
 	{
 		printf(" Cadastre o %dª aluno:\n", i+1);
 
@@ -44,7 +45,7 @@ void main(){
 		printf("\n\n");
 	}
 
-	for(i = 0; i < 2; i++){
+	for(i = 0; i < TAM; i++){
 	 	if(Aluno[i].MediaFinal > (5.0)){
 
 	 		Aprovados[i] = Aluno[i];			
@@ -56,7 +57,7 @@ void main(){
 	}
 	
 
-	for(i = 0; i < 2; i++){
+	for(i = 0; i < TAM; i++){
 		if(Aprovados[i].Nome[0]!= ' '){
 			printf("\nAprovados: \n");
 			printf("\nAluno: %s",Aprovados[i].Nome);
@@ -65,7 +66,7 @@ void main(){
 		}
 	}
 
-	for(i = 0; i <2; i++){
+	for(i = 0; i <TAM; i++){
 		if(Reprovados[i].Nome[0]!= ' '){
 
 		printf("\nReprovados: \n");
