@@ -8,7 +8,7 @@
 //Kelvin para Celcius: C = K ? 273,15
 //Celcius para Kelvin: K = C + 273,15
 //Kelvin para Fahrenheit: F = 1,8(K-273) + 32
-void con();
+void con(int conversao, float ValorEscala);
 void main(){
     setlocale(LC_ALL,"Portuguese");
     float ValorEscala;

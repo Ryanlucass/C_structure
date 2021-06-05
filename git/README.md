@@ -1,2 +1,2 @@
 # lerning_c
- Aplicando em C, alguns exercícios para fixação de conteúdo, listas de resoluções e etc 
+ Aprendendo estruturas de dados: Listas, filas, pilhas, arvores e etc
