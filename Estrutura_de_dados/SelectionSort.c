@@ -2,20 +2,7 @@
 #include <locale.h>
 #include <stdlib.h>
 
-//[Explicação sobre esse modo]
 
-//A cada passo, procura o melhor valor do array e
-//o coloca na primeira posição do array
-//Descartar-se a primeira posição do array e
-//repete-se o processo para a segunda posição
-//isso é feito para todas as posições do array
-
-
-//[Performance]
-//Melhor caso: 0(N^2)
-//Pior caso: 0(N^2)
-//Ineficiente para grandes conjutnos de dados
-//Estável: não altera a ordem de dados iguais 
 
 void EscreverVetor(int *numeros, int tamanho);
 void SelectionSort(int *numeros, int tamanho);
