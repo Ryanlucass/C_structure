@@ -1,4 +1,4 @@
-# Estrutura de dados | Organização de Vetors
+# Estrutura de dados | Métodos de ordenação
 
 
 ## Buble Sort
@@ -22,3 +22,18 @@ Melhor caso: 0(N^2)
 Pior caso: 0(N^2)
 Ineficiente para grandes conjutnos de dados
 Estável: não altera a ordem de dados iguais 
+
+
+## Insertion Sort ou Ordenação por inserção 
+
+Similiar a ordenação de cartas de baralho com as mãos 
+Pega-se uma carta de cada vez e a coloca em seu devido lugar, 
+sempre deixando as cartas da mão em ordem 
+
+## Performance
+Melhor caso: 0(N)
+Pior caso: 0(N^2)
+Eficiente para conjuntos pequenos de dados
+Estável: não altera a ordem de dados iguais 
+Capaz de ordenar os dados a medida em que os recebe (real time)
+

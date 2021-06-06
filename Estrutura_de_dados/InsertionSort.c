@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 
-
+ 
 void EscreverVetor(int *numeros, int tamanho);
-void SelectionSort(int *numeros, int tamanho);
+void InsertionSort(int *numeros, int tamanho);
 int main(){
 
 	//SelectSort ou ordenação por seleção
@@ -19,17 +19,13 @@ int main(){
 	
 	EscreverVetor(numeros,tamanho);
 	
-	SelectionSort(numeros, tamanho);
+	InsertionSort(numeros, tamanho);
 	
 	 printf("\nElementos do array em ordem crescente: \n");
 
     for(int i = 0; i<tamanho; i++){
         printf("%4d",numeros[i]);
     }
-	
-	return 0;
-	
-		
 	
 	return 0;
 }
@@ -50,23 +46,15 @@ void EscreverVetor(int *numeros, int tamanho){
 	
 }
 
-void SelectionSort(int *numeros, int tamanho){
-	int j,i, menor, trocar;
+void InsertionSort(int *numeros, int tamanho){
+	int j,i,aux;
 	
-	for(i =0; i<tamanho-1; i++){
-		menor = i;
-		
-		for(j = i+1; j<tamanho; j++){ 
-			//sempre verifica o próximo
-			if(numeros[j] < numeros[menor])
-				menor = j;
-		}	
-		if(i != menor){ 
-			//trocando a posição do array como qualuer outra estrutura de dados 
-			trocar = numeros[i];
-			numeros[i] = numeros[menor];
-			numeros[menor] = trocar;
+	for (i=1; i<tamanho; i++){
+		aux = numeros[i];
+		for(j = i; (j > 0) && (aux < numeros[j - 1]); j--){
+			numeros[j] = numeros[j - 1];
 		}
+		numeros [j] = aux;
 	}
 
 }
