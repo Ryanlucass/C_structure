@@ -4,6 +4,9 @@
 void EscreverVetor(int *numeros, int tamanho);
 void BubbleSort(int *numeros, int tamanho, int aux, int contador);
 
+//quando for compilar no dev++ prestar atenção no tipo do arquivo tem que ser cpp, like that
+
+
 int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
