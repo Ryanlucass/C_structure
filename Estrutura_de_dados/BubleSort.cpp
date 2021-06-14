@@ -50,9 +50,6 @@ void EscreverVetor(int *numeros, int tamanho){
 	//criando uma função para o Bublesort
 void BubbleSort(int *numeros, int tamanho, int aux, int contador){
 	
-	
-	
-	
 	//for é tam - 1 pois ele não pega o último ítem do array, ele já é o maior 
     //não precisa ser verificado     
     for(contador = 1; contador <tamanho; contador++){ 
