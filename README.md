@@ -1,4 +1,10 @@
 # Estrutura de dados | Métodos de ordenação
+---
+
+# Projeto voltado para inicialização de lógica de programação 
+tecnologias usadas: 
+- c
+- c++
 
 
 ## Buble Sort
