@@ -1,10 +1,22 @@
-# Estrutura de dados | Métodos de ordenação
----
+## Fique por dentro
 
-# Projeto voltado para inicialização de lógica de programação 
-tecnologias usadas: 
+>Algumas partes do repositório podem conter conteúdos referente a disciplina de "Estrutura de dados em C" ADS.
+ 
+Projeto voltado ao estudo de lógica de programação utilizando linguagem C e C++
+
+### Tecnologias usadas: 
 - c
 - c++
+
+### Tópicos
+
+- Lista01
+- Lista02
+- Lista03
+- Estrutura de dados 
+
+</br>
+
 
 
 ## Buble Sort
